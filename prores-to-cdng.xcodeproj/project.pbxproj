@@ -7,13 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2931EB282C04C0E60020DD2B /* dng_bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9E12C04A5FE001A8DE0 /* dng_bridge.cpp */; };
+		2931EB292C04C0E60020DD2B /* compress-tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9EB2C04A959001A8DE0 /* compress-tile.cpp */; };
+		2931EB2A2C04C0E60020DD2B /* make_dng_from_cfa.cc in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9E02C04A5FE001A8DE0 /* make_dng_from_cfa.cc */; };
+		2931EB2B2C04C0E60020DD2B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9502C04A33D001A8DE0 /* main.swift */; };
+		2931EB2D2C04C0E60020DD2B /* libcjpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9962C04A50F001A8DE0 /* libcjpeg12-static.a */; };
+		2931EB2E2C04C0E60020DD2B /* libcjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9942C04A50F001A8DE0 /* libcjpeg12.a */; };
+		2931EB2F2C04C0E60020DD2B /* libcjpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE99A2C04A50F001A8DE0 /* libcjpeg16-static.a */; };
+		2931EB302C04C0E60020DD2B /* libcjpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9982C04A50F001A8DE0 /* libcjpeg16.a */; };
+		2931EB312C04C0E60020DD2B /* libdjpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A22C04A50F001A8DE0 /* libdjpeg12-static.a */; };
+		2931EB322C04C0E60020DD2B /* libdjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A02C04A50F001A8DE0 /* libdjpeg12.a */; };
+		2931EB332C04C0E60020DD2B /* libdjpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A62C04A50F001A8DE0 /* libdjpeg16-static.a */; };
+		2931EB342C04C0E60020DD2B /* libdjpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A42C04A50F001A8DE0 /* libdjpeg16.a */; };
+		2931EB352C04C0E60020DD2B /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B02C04A50F001A8DE0 /* libjpeg.a */; };
+		2931EB362C04C0E60020DD2B /* libjpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B42C04A50F001A8DE0 /* libjpeg12-static.a */; };
+		2931EB372C04C0E60020DD2B /* libjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B22C04A50F001A8DE0 /* libjpeg12.a */; };
+		2931EB382C04C0E60020DD2B /* libjpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B82C04A50F001A8DE0 /* libjpeg16-static.a */; };
+		2931EB392C04C0E60020DD2B /* libjpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B62C04A50F001A8DE0 /* libjpeg16.a */; };
+		2931EB3A2C04C0E60020DD2B /* libsimd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9C22C04A50F001A8DE0 /* libsimd.a */; };
+		2931EB3B2C04C0E60020DD2B /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D22C04A50F001A8DE0 /* libturbojpeg.a */; };
+		2931EB3C2C04C0E60020DD2B /* libturbojpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D62C04A50F001A8DE0 /* libturbojpeg12-static.a */; };
+		2931EB3D2C04C0E60020DD2B /* libturbojpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D42C04A50F001A8DE0 /* libturbojpeg12.a */; };
+		2931EB3E2C04C0E60020DD2B /* libturbojpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9DA2C04A50F001A8DE0 /* libturbojpeg16-static.a */; };
+		2931EB3F2C04C0E60020DD2B /* libturbojpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D82C04A50F001A8DE0 /* libturbojpeg16.a */; };
 		295AE9512C04A33D001A8DE0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9502C04A33D001A8DE0 /* main.swift */; };
 		295AE9E22C04A5FE001A8DE0 /* make_dng_from_cfa.cc in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9E02C04A5FE001A8DE0 /* make_dng_from_cfa.cc */; };
 		295AE9E32C04A5FE001A8DE0 /* dng_bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9E12C04A5FE001A8DE0 /* dng_bridge.cpp */; };
 		295AE9ED2C04A959001A8DE0 /* compress-tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9EB2C04A959001A8DE0 /* compress-tile.cpp */; };
 		295AE9F02C04AAE5001A8DE0 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B02C04A50F001A8DE0 /* libjpeg.a */; };
 		295AE9F12C04AAF6001A8DE0 /* libjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B22C04A50F001A8DE0 /* libjpeg12.a */; };
-		295AE9F22C04AB03001A8DE0 /* libjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9AE2C04A50F001A8DE0 /* libjpeg.dylib */; };
 		295AE9F32C04AB1C001A8DE0 /* libcjpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9962C04A50F001A8DE0 /* libcjpeg12-static.a */; };
 		295AE9F42C04AB1C001A8DE0 /* libcjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9942C04A50F001A8DE0 /* libcjpeg12.a */; };
 		295AE9F52C04AB1C001A8DE0 /* libcjpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE99A2C04A50F001A8DE0 /* libcjpeg16-static.a */; };
@@ -27,7 +49,6 @@
 		295AE9FD2C04AB1C001A8DE0 /* libjpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B62C04A50F001A8DE0 /* libjpeg16.a */; };
 		295AE9FE2C04AB1C001A8DE0 /* libsimd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9C22C04A50F001A8DE0 /* libsimd.a */; };
 		295AE9FF2C04AB1C001A8DE0 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D22C04A50F001A8DE0 /* libturbojpeg.a */; };
-		295AEA002C04AB1C001A8DE0 /* libturbojpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D02C04A50F001A8DE0 /* libturbojpeg.dylib */; };
 		295AEA012C04AB1C001A8DE0 /* libturbojpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D62C04A50F001A8DE0 /* libturbojpeg12-static.a */; };
 		295AEA022C04AB1C001A8DE0 /* libturbojpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D42C04A50F001A8DE0 /* libturbojpeg12.a */; };
 		295AEA032C04AB1C001A8DE0 /* libturbojpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9DA2C04A50F001A8DE0 /* libturbojpeg16-static.a */; };
@@ -311,6 +332,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		2931EB402C04C0E60020DD2B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		295AE94B2C04A33D001A8DE0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +353,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2931EB442C04C0E60020DD2B /* prores-to-cdng release */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "prores-to-cdng release"; sourceTree = BUILT_PRODUCTS_DIR; };
 		295AE94D2C04A33D001A8DE0 /* prores-to-cdng */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "prores-to-cdng"; sourceTree = BUILT_PRODUCTS_DIR; };
 		295AE9502C04A33D001A8DE0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "libjpeg-turbo.xcodeproj"; path = "turbo-jpeg/libjpeg-turbo.xcodeproj"; sourceTree = "<group>"; };
@@ -339,6 +370,32 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2931EB2C2C04C0E60020DD2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2931EB2D2C04C0E60020DD2B /* libcjpeg12-static.a in Frameworks */,
+				2931EB2E2C04C0E60020DD2B /* libcjpeg12.a in Frameworks */,
+				2931EB2F2C04C0E60020DD2B /* libcjpeg16-static.a in Frameworks */,
+				2931EB302C04C0E60020DD2B /* libcjpeg16.a in Frameworks */,
+				2931EB312C04C0E60020DD2B /* libdjpeg12-static.a in Frameworks */,
+				2931EB322C04C0E60020DD2B /* libdjpeg12.a in Frameworks */,
+				2931EB332C04C0E60020DD2B /* libdjpeg16-static.a in Frameworks */,
+				2931EB342C04C0E60020DD2B /* libdjpeg16.a in Frameworks */,
+				2931EB352C04C0E60020DD2B /* libjpeg.a in Frameworks */,
+				2931EB362C04C0E60020DD2B /* libjpeg12-static.a in Frameworks */,
+				2931EB372C04C0E60020DD2B /* libjpeg12.a in Frameworks */,
+				2931EB382C04C0E60020DD2B /* libjpeg16-static.a in Frameworks */,
+				2931EB392C04C0E60020DD2B /* libjpeg16.a in Frameworks */,
+				2931EB3A2C04C0E60020DD2B /* libsimd.a in Frameworks */,
+				2931EB3B2C04C0E60020DD2B /* libturbojpeg.a in Frameworks */,
+				2931EB3C2C04C0E60020DD2B /* libturbojpeg12-static.a in Frameworks */,
+				2931EB3D2C04C0E60020DD2B /* libturbojpeg12.a in Frameworks */,
+				2931EB3E2C04C0E60020DD2B /* libturbojpeg16-static.a in Frameworks */,
+				2931EB3F2C04C0E60020DD2B /* libturbojpeg16.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		295AE94A2C04A33D001A8DE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -352,14 +409,12 @@
 				295AE9F92C04AB1C001A8DE0 /* libdjpeg16-static.a in Frameworks */,
 				295AE9FA2C04AB1C001A8DE0 /* libdjpeg16.a in Frameworks */,
 				295AE9F02C04AAE5001A8DE0 /* libjpeg.a in Frameworks */,
-				295AE9F22C04AB03001A8DE0 /* libjpeg.dylib in Frameworks */,
 				295AE9FB2C04AB1C001A8DE0 /* libjpeg12-static.a in Frameworks */,
 				295AE9F12C04AAF6001A8DE0 /* libjpeg12.a in Frameworks */,
 				295AE9FC2C04AB1C001A8DE0 /* libjpeg16-static.a in Frameworks */,
 				295AE9FD2C04AB1C001A8DE0 /* libjpeg16.a in Frameworks */,
 				295AE9FE2C04AB1C001A8DE0 /* libsimd.a in Frameworks */,
 				295AE9FF2C04AB1C001A8DE0 /* libturbojpeg.a in Frameworks */,
-				295AEA002C04AB1C001A8DE0 /* libturbojpeg.dylib in Frameworks */,
 				295AEA012C04AB1C001A8DE0 /* libturbojpeg12-static.a in Frameworks */,
 				295AEA022C04AB1C001A8DE0 /* libturbojpeg12.a in Frameworks */,
 				295AEA032C04AB1C001A8DE0 /* libturbojpeg16-static.a in Frameworks */,
@@ -384,6 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				295AE94D2C04A33D001A8DE0 /* prores-to-cdng */,
+				2931EB442C04C0E60020DD2B /* prores-to-cdng release */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,6 +518,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2931EB262C04C0E60020DD2B /* prores-to-cdng release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2931EB412C04C0E60020DD2B /* Build configuration list for PBXNativeTarget "prores-to-cdng release" */;
+			buildPhases = (
+				2931EB272C04C0E60020DD2B /* Sources */,
+				2931EB2C2C04C0E60020DD2B /* Frameworks */,
+				2931EB402C04C0E60020DD2B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "prores-to-cdng release";
+			productName = "prores-to-cdng";
+			productReference = 2931EB442C04C0E60020DD2B /* prores-to-cdng release */;
+			productType = "com.apple.product-type.tool";
+		};
 		295AE94C2C04A33D001A8DE0 /* prores-to-cdng */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 295AE9542C04A33D001A8DE0 /* Build configuration list for PBXNativeTarget "prores-to-cdng" */;
@@ -515,6 +588,7 @@
 			projectRoot = "";
 			targets = (
 				295AE94C2C04A33D001A8DE0 /* prores-to-cdng */,
+				2931EB262C04C0E60020DD2B /* prores-to-cdng release */,
 			);
 		};
 /* End PBXProject section */
@@ -798,6 +872,17 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2931EB272C04C0E60020DD2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2931EB282C04C0E60020DD2B /* dng_bridge.cpp in Sources */,
+				2931EB292C04C0E60020DD2B /* compress-tile.cpp in Sources */,
+				2931EB2A2C04C0E60020DD2B /* make_dng_from_cfa.cc in Sources */,
+				2931EB2B2C04C0E60020DD2B /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		295AE9492C04A33D001A8DE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -812,6 +897,32 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		2931EB422C04C0E60020DD2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "prores-to-cdng/dng_export-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2931EB432C04C0E60020DD2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "prores-to-cdng/dng_export-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		295AE9522C04A33D001A8DE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -970,6 +1081,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2931EB412C04C0E60020DD2B /* Build configuration list for PBXNativeTarget "prores-to-cdng release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2931EB422C04C0E60020DD2B /* Debug */,
+				2931EB432C04C0E60020DD2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		295AE9482C04A33D001A8DE0 /* Build configuration list for PBXProject "prores-to-cdng" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

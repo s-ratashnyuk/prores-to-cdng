@@ -134,10 +134,10 @@ void makeDngFromCFA(void * inBuf, long size, std::string fileName) {
     di.SetBlackLevelRepeatDim(1, 1);
         
     double cm1[9] = {0.94519, -0.24292, -0.0788574, -0.494141, 1.12805, 0.0595703, -0.00927734, 0.0153809, 0.220337};
-    di.SetColorMatrix1(1, cm1);
+    di.SetColorMatrix1(3, cm1);
     
     double cm2[9] = {0.493408, -0.0946045, -0.0467529, -0.400269, 0.959595, 0.132446, 0.013916, -0.0236816, 0.426147};
-    di.SetColorMatrix2(1, cm2);
+    di.SetColorMatrix2(3, cm2);
     
     double asn[3] = {0.494629, 1, 0.568237};
     di.SetAsShotNeutral(3, asn);

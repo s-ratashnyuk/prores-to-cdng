@@ -1802,8 +1802,8 @@ bool DNGImage::SetColorMatrix1(const unsigned int plane_count,
       return false;
     }
 
-    vs[2 * i + 0] = static_cast<unsigned int>(numerator);
-    vs[2 * i + 1] = static_cast<unsigned int>(denominator);
+    vs[2 * i + 0] = static_cast<int>(numerator);
+    vs[2 * i + 1] = static_cast<int>(denominator);
 
     // TODO(syoyo): Swap rational value(8 bytes) when writing IFD tag, not here.
     if (swap_endian_) {
@@ -1834,8 +1834,8 @@ bool DNGImage::SetColorMatrix2(const unsigned int plane_count,
       return false;
     }
 
-    vs[2 * i + 0] = static_cast<unsigned int>(numerator);
-    vs[2 * i + 1] = static_cast<unsigned int>(denominator);
+    vs[2 * i + 0] = static_cast<int>(numerator);
+    vs[2 * i + 1] = static_cast<int>(denominator);
 
     // TODO(syoyo): Swap rational value(8 bytes) when writing IFD tag, not here.
     if (swap_endian_) {
@@ -2107,8 +2107,8 @@ bool DNGImage::SetAsShotNeutral(const unsigned int plane_count,
       return false;
     }
 
-    vs[2 * i + 0] = static_cast<unsigned int>(numerator);
-    vs[2 * i + 1] = static_cast<unsigned int>(denominator);
+    vs[2 * i + 0] = static_cast<int>(numerator);
+    vs[2 * i + 1] = static_cast<int>(denominator);
 
     // TODO(syoyo): Swap rational value(8 bytes) when writing IFD tag, not here.
     if (swap_endian_) {
