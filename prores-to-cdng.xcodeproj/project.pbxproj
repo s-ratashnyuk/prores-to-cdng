@@ -1,0 +1,994 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		295AE9512C04A33D001A8DE0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9502C04A33D001A8DE0 /* main.swift */; };
+		295AE9E22C04A5FE001A8DE0 /* make_dng_from_cfa.cc in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9E02C04A5FE001A8DE0 /* make_dng_from_cfa.cc */; };
+		295AE9E32C04A5FE001A8DE0 /* dng_bridge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9E12C04A5FE001A8DE0 /* dng_bridge.cpp */; };
+		295AE9ED2C04A959001A8DE0 /* compress-tile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 295AE9EB2C04A959001A8DE0 /* compress-tile.cpp */; };
+		295AE9F02C04AAE5001A8DE0 /* libjpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B02C04A50F001A8DE0 /* libjpeg.a */; };
+		295AE9F12C04AAF6001A8DE0 /* libjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B22C04A50F001A8DE0 /* libjpeg12.a */; };
+		295AE9F22C04AB03001A8DE0 /* libjpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9AE2C04A50F001A8DE0 /* libjpeg.dylib */; };
+		295AE9F32C04AB1C001A8DE0 /* libcjpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9962C04A50F001A8DE0 /* libcjpeg12-static.a */; };
+		295AE9F42C04AB1C001A8DE0 /* libcjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9942C04A50F001A8DE0 /* libcjpeg12.a */; };
+		295AE9F52C04AB1C001A8DE0 /* libcjpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE99A2C04A50F001A8DE0 /* libcjpeg16-static.a */; };
+		295AE9F62C04AB1C001A8DE0 /* libcjpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9982C04A50F001A8DE0 /* libcjpeg16.a */; };
+		295AE9F72C04AB1C001A8DE0 /* libdjpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A22C04A50F001A8DE0 /* libdjpeg12-static.a */; };
+		295AE9F82C04AB1C001A8DE0 /* libdjpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A02C04A50F001A8DE0 /* libdjpeg12.a */; };
+		295AE9F92C04AB1C001A8DE0 /* libdjpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A62C04A50F001A8DE0 /* libdjpeg16-static.a */; };
+		295AE9FA2C04AB1C001A8DE0 /* libdjpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9A42C04A50F001A8DE0 /* libdjpeg16.a */; };
+		295AE9FB2C04AB1C001A8DE0 /* libjpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B42C04A50F001A8DE0 /* libjpeg12-static.a */; };
+		295AE9FC2C04AB1C001A8DE0 /* libjpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B82C04A50F001A8DE0 /* libjpeg16-static.a */; };
+		295AE9FD2C04AB1C001A8DE0 /* libjpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9B62C04A50F001A8DE0 /* libjpeg16.a */; };
+		295AE9FE2C04AB1C001A8DE0 /* libsimd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9C22C04A50F001A8DE0 /* libsimd.a */; };
+		295AE9FF2C04AB1C001A8DE0 /* libturbojpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D22C04A50F001A8DE0 /* libturbojpeg.a */; };
+		295AEA002C04AB1C001A8DE0 /* libturbojpeg.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D02C04A50F001A8DE0 /* libturbojpeg.dylib */; };
+		295AEA012C04AB1C001A8DE0 /* libturbojpeg12-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D62C04A50F001A8DE0 /* libturbojpeg12-static.a */; };
+		295AEA022C04AB1C001A8DE0 /* libturbojpeg12.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D42C04A50F001A8DE0 /* libturbojpeg12.a */; };
+		295AEA032C04AB1C001A8DE0 /* libturbojpeg16-static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9DA2C04A50F001A8DE0 /* libturbojpeg16-static.a */; };
+		295AEA042C04AB1C001A8DE0 /* libturbojpeg16.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 295AE9D82C04A50F001A8DE0 /* libturbojpeg16.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		295AE98F2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBC3E379E3334231AE4B1114;
+			remoteInfo = cjpeg;
+		};
+		295AE9912C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 217C37B8C60445BAB40DC868;
+			remoteInfo = "cjpeg-static";
+		};
+		295AE9932C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 642EA23E2EBA47EE8A31EED3;
+			remoteInfo = cjpeg12;
+		};
+		295AE9952C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C1E8F7ED1A2434091F465D8;
+			remoteInfo = "cjpeg12-static";
+		};
+		295AE9972C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C5D0CE6C1E294A7391CFF061;
+			remoteInfo = cjpeg16;
+		};
+		295AE9992C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E2D6C7FEB0248E48FC01790;
+			remoteInfo = "cjpeg16-static";
+		};
+		295AE99B2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0E4D5C6655A34E17BA1AD5F1;
+			remoteInfo = djpeg;
+		};
+		295AE99D2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E5D032A8768745C6918B1EAB;
+			remoteInfo = "djpeg-static";
+		};
+		295AE99F2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1F5A1D65140B455198D8681F;
+			remoteInfo = djpeg12;
+		};
+		295AE9A12C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A639C28D8DFD4C7BBEA36433;
+			remoteInfo = "djpeg12-static";
+		};
+		295AE9A32C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3FE24D62FFBD44BAA07EBB3B;
+			remoteInfo = djpeg16;
+		};
+		295AE9A52C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5180B9063E1642F7B750E414;
+			remoteInfo = "djpeg16-static";
+		};
+		295AE9A72C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7F984874079D4F339024FB9C;
+			remoteInfo = example;
+		};
+		295AE9A92C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7A1F61DB86F54B439EBC4B00;
+			remoteInfo = "example-static";
+		};
+		295AE9AB2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63E7CBD00AC14228A459B99F;
+			remoteInfo = jcstest;
+		};
+		295AE9AD2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9F4CB71792E1485192C43788;
+			remoteInfo = jpeg;
+		};
+		295AE9AF2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B8370AB9095489D8F73EA7B;
+			remoteInfo = "jpeg-static";
+		};
+		295AE9B12C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C38C40E1ADF94FA3B30248E8;
+			remoteInfo = jpeg12;
+		};
+		295AE9B32C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51FA78B1D2F44175AE9FAFC8;
+			remoteInfo = "jpeg12-static";
+		};
+		295AE9B52C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E2F057CF2764E2B894A5B74;
+			remoteInfo = jpeg16;
+		};
+		295AE9B72C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 38553D7A18A3473E888BC06D;
+			remoteInfo = "jpeg16-static";
+		};
+		295AE9B92C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 44B6757EF3A34189A82A2691;
+			remoteInfo = jpegtran;
+		};
+		295AE9BB2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8F053752E8594149ABC7EA79;
+			remoteInfo = "jpegtran-static";
+		};
+		295AE9BD2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 75E9E9F777C9458E880F27E0;
+			remoteInfo = md5cmp;
+		};
+		295AE9BF2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EFAB65A0A0DA4BF8A7922B4A;
+			remoteInfo = rdjpgcom;
+		};
+		295AE9C12C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 993D54E13907417AA566F18D;
+			remoteInfo = simd;
+		};
+		295AE9C32C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 803E93842FF5468B82DA3487;
+			remoteInfo = strtest;
+		};
+		295AE9C52C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D194A6D478434DB5A301CE2B;
+			remoteInfo = tjbench;
+		};
+		295AE9C72C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BB94CAC13954ADDB474C48C;
+			remoteInfo = "tjbench-static";
+		};
+		295AE9C92C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DF9E040C490B495A88850517;
+			remoteInfo = tjexample;
+		};
+		295AE9CB2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F56E968B9B09473F9BB55E7A;
+			remoteInfo = tjunittest;
+		};
+		295AE9CD2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D6DBD54C437646EC9A083BBF;
+			remoteInfo = "tjunittest-static";
+		};
+		295AE9CF2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 74A86DDE0B5B4A7BB7CA1CDC;
+			remoteInfo = turbojpeg;
+		};
+		295AE9D12C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6208BA41C18148E284236134;
+			remoteInfo = "turbojpeg-static";
+		};
+		295AE9D32C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7C34BB91138148B6A1699073;
+			remoteInfo = turbojpeg12;
+		};
+		295AE9D52C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3F08010FE2F40628FF6B880;
+			remoteInfo = "turbojpeg12-static";
+		};
+		295AE9D72C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 32EEC7B3F07E470690D2F732;
+			remoteInfo = turbojpeg16;
+		};
+		295AE9D92C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BF75C29AD02E4AB9A7D9F481;
+			remoteInfo = "turbojpeg16-static";
+		};
+		295AE9DB2C04A50F001A8DE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8EE1F7AAA500423C8A79FAFA;
+			remoteInfo = wrjpgcom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		295AE94B2C04A33D001A8DE0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		295AE94D2C04A33D001A8DE0 /* prores-to-cdng */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "prores-to-cdng"; sourceTree = BUILT_PRODUCTS_DIR; };
+		295AE9502C04A33D001A8DE0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "libjpeg-turbo.xcodeproj"; path = "turbo-jpeg/libjpeg-turbo.xcodeproj"; sourceTree = "<group>"; };
+		295AE9DD2C04A5FE001A8DE0 /* dng_export-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "dng_export-Bridging-Header.h"; sourceTree = "<group>"; };
+		295AE9DE2C04A5FE001A8DE0 /* make_dng_from_cfa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = make_dng_from_cfa.h; sourceTree = "<group>"; };
+		295AE9DF2C04A5FE001A8DE0 /* dng_bridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dng_bridge.hpp; sourceTree = "<group>"; };
+		295AE9E02C04A5FE001A8DE0 /* make_dng_from_cfa.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = make_dng_from_cfa.cc; sourceTree = "<group>"; };
+		295AE9E12C04A5FE001A8DE0 /* dng_bridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dng_bridge.cpp; sourceTree = "<group>"; };
+		295AE9E92C04A926001A8DE0 /* linearizationTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linearizationTable.h; sourceTree = "<group>"; };
+		295AE9EA2C04A959001A8DE0 /* compress-tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "compress-tile.hpp"; sourceTree = "<group>"; };
+		295AE9EB2C04A959001A8DE0 /* compress-tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "compress-tile.cpp"; sourceTree = "<group>"; };
+		295AE9EC2C04A959001A8DE0 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		295AE9EE2C04A9AB001A8DE0 /* tiny_dng_writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiny_dng_writer.h; path = "tiny-dng/tiny_dng_writer.h"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		295AE94A2C04A33D001A8DE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				295AE9F32C04AB1C001A8DE0 /* libcjpeg12-static.a in Frameworks */,
+				295AE9F42C04AB1C001A8DE0 /* libcjpeg12.a in Frameworks */,
+				295AE9F52C04AB1C001A8DE0 /* libcjpeg16-static.a in Frameworks */,
+				295AE9F62C04AB1C001A8DE0 /* libcjpeg16.a in Frameworks */,
+				295AE9F72C04AB1C001A8DE0 /* libdjpeg12-static.a in Frameworks */,
+				295AE9F82C04AB1C001A8DE0 /* libdjpeg12.a in Frameworks */,
+				295AE9F92C04AB1C001A8DE0 /* libdjpeg16-static.a in Frameworks */,
+				295AE9FA2C04AB1C001A8DE0 /* libdjpeg16.a in Frameworks */,
+				295AE9F02C04AAE5001A8DE0 /* libjpeg.a in Frameworks */,
+				295AE9F22C04AB03001A8DE0 /* libjpeg.dylib in Frameworks */,
+				295AE9FB2C04AB1C001A8DE0 /* libjpeg12-static.a in Frameworks */,
+				295AE9F12C04AAF6001A8DE0 /* libjpeg12.a in Frameworks */,
+				295AE9FC2C04AB1C001A8DE0 /* libjpeg16-static.a in Frameworks */,
+				295AE9FD2C04AB1C001A8DE0 /* libjpeg16.a in Frameworks */,
+				295AE9FE2C04AB1C001A8DE0 /* libsimd.a in Frameworks */,
+				295AE9FF2C04AB1C001A8DE0 /* libturbojpeg.a in Frameworks */,
+				295AEA002C04AB1C001A8DE0 /* libturbojpeg.dylib in Frameworks */,
+				295AEA012C04AB1C001A8DE0 /* libturbojpeg12-static.a in Frameworks */,
+				295AEA022C04AB1C001A8DE0 /* libturbojpeg12.a in Frameworks */,
+				295AEA032C04AB1C001A8DE0 /* libturbojpeg16-static.a in Frameworks */,
+				295AEA042C04AB1C001A8DE0 /* libturbojpeg16.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		295AE9442C04A33D001A8DE0 = {
+			isa = PBXGroup;
+			children = (
+				295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */,
+				295AE94F2C04A33D001A8DE0 /* prores-to-cdng */,
+				295AE94E2C04A33D001A8DE0 /* Products */,
+				295AE9EF2C04AAE5001A8DE0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		295AE94E2C04A33D001A8DE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				295AE94D2C04A33D001A8DE0 /* prores-to-cdng */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		295AE94F2C04A33D001A8DE0 /* prores-to-cdng */ = {
+			isa = PBXGroup;
+			children = (
+				295AE9EE2C04A9AB001A8DE0 /* tiny_dng_writer.h */,
+				295AE9EB2C04A959001A8DE0 /* compress-tile.cpp */,
+				295AE9EA2C04A959001A8DE0 /* compress-tile.hpp */,
+				295AE9EC2C04A959001A8DE0 /* utils.h */,
+				295AE9E92C04A926001A8DE0 /* linearizationTable.h */,
+				295AE9E12C04A5FE001A8DE0 /* dng_bridge.cpp */,
+				295AE9DF2C04A5FE001A8DE0 /* dng_bridge.hpp */,
+				295AE9DD2C04A5FE001A8DE0 /* dng_export-Bridging-Header.h */,
+				295AE9E02C04A5FE001A8DE0 /* make_dng_from_cfa.cc */,
+				295AE9DE2C04A5FE001A8DE0 /* make_dng_from_cfa.h */,
+				295AE9502C04A33D001A8DE0 /* main.swift */,
+			);
+			path = "prores-to-cdng";
+			sourceTree = "<group>";
+		};
+		295AE9582C04A50F001A8DE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				295AE9902C04A50F001A8DE0 /* cjpeg */,
+				295AE9922C04A50F001A8DE0 /* cjpeg-static */,
+				295AE9942C04A50F001A8DE0 /* libcjpeg12.a */,
+				295AE9962C04A50F001A8DE0 /* libcjpeg12-static.a */,
+				295AE9982C04A50F001A8DE0 /* libcjpeg16.a */,
+				295AE99A2C04A50F001A8DE0 /* libcjpeg16-static.a */,
+				295AE99C2C04A50F001A8DE0 /* djpeg */,
+				295AE99E2C04A50F001A8DE0 /* djpeg-static */,
+				295AE9A02C04A50F001A8DE0 /* libdjpeg12.a */,
+				295AE9A22C04A50F001A8DE0 /* libdjpeg12-static.a */,
+				295AE9A42C04A50F001A8DE0 /* libdjpeg16.a */,
+				295AE9A62C04A50F001A8DE0 /* libdjpeg16-static.a */,
+				295AE9A82C04A50F001A8DE0 /* example */,
+				295AE9AA2C04A50F001A8DE0 /* example-static */,
+				295AE9AC2C04A50F001A8DE0 /* jcstest */,
+				295AE9AE2C04A50F001A8DE0 /* libjpeg.dylib */,
+				295AE9B02C04A50F001A8DE0 /* libjpeg.a */,
+				295AE9B22C04A50F001A8DE0 /* libjpeg12.a */,
+				295AE9B42C04A50F001A8DE0 /* libjpeg12-static.a */,
+				295AE9B62C04A50F001A8DE0 /* libjpeg16.a */,
+				295AE9B82C04A50F001A8DE0 /* libjpeg16-static.a */,
+				295AE9BA2C04A50F001A8DE0 /* jpegtran */,
+				295AE9BC2C04A50F001A8DE0 /* jpegtran-static */,
+				295AE9BE2C04A50F001A8DE0 /* md5cmp */,
+				295AE9C02C04A50F001A8DE0 /* rdjpgcom */,
+				295AE9C22C04A50F001A8DE0 /* libsimd.a */,
+				295AE9C42C04A50F001A8DE0 /* strtest */,
+				295AE9C62C04A50F001A8DE0 /* tjbench */,
+				295AE9C82C04A50F001A8DE0 /* tjbench-static */,
+				295AE9CA2C04A50F001A8DE0 /* tjexample */,
+				295AE9CC2C04A50F001A8DE0 /* tjunittest */,
+				295AE9CE2C04A50F001A8DE0 /* tjunittest-static */,
+				295AE9D02C04A50F001A8DE0 /* libturbojpeg.dylib */,
+				295AE9D22C04A50F001A8DE0 /* libturbojpeg.a */,
+				295AE9D42C04A50F001A8DE0 /* libturbojpeg12.a */,
+				295AE9D62C04A50F001A8DE0 /* libturbojpeg12-static.a */,
+				295AE9D82C04A50F001A8DE0 /* libturbojpeg16.a */,
+				295AE9DA2C04A50F001A8DE0 /* libturbojpeg16-static.a */,
+				295AE9DC2C04A50F001A8DE0 /* wrjpgcom */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		295AE9EF2C04AAE5001A8DE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		295AE94C2C04A33D001A8DE0 /* prores-to-cdng */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 295AE9542C04A33D001A8DE0 /* Build configuration list for PBXNativeTarget "prores-to-cdng" */;
+			buildPhases = (
+				295AE9492C04A33D001A8DE0 /* Sources */,
+				295AE94A2C04A33D001A8DE0 /* Frameworks */,
+				295AE94B2C04A33D001A8DE0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "prores-to-cdng";
+			productName = "prores-to-cdng";
+			productReference = 295AE94D2C04A33D001A8DE0 /* prores-to-cdng */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		295AE9452C04A33D001A8DE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					295AE94C2C04A33D001A8DE0 = {
+						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
+					};
+				};
+			};
+			buildConfigurationList = 295AE9482C04A33D001A8DE0 /* Build configuration list for PBXProject "prores-to-cdng" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 295AE9442C04A33D001A8DE0;
+			productRefGroup = 295AE94E2C04A33D001A8DE0 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 295AE9582C04A50F001A8DE0 /* Products */;
+					ProjectRef = 295AE9572C04A50F001A8DE0 /* libjpeg-turbo.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				295AE94C2C04A33D001A8DE0 /* prores-to-cdng */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		295AE9902C04A50F001A8DE0 /* cjpeg */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = cjpeg;
+			remoteRef = 295AE98F2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9922C04A50F001A8DE0 /* cjpeg-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "cjpeg-static";
+			remoteRef = 295AE9912C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9942C04A50F001A8DE0 /* libcjpeg12.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcjpeg12.a;
+			remoteRef = 295AE9932C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9962C04A50F001A8DE0 /* libcjpeg12-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcjpeg12-static.a";
+			remoteRef = 295AE9952C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9982C04A50F001A8DE0 /* libcjpeg16.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcjpeg16.a;
+			remoteRef = 295AE9972C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE99A2C04A50F001A8DE0 /* libcjpeg16-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcjpeg16-static.a";
+			remoteRef = 295AE9992C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE99C2C04A50F001A8DE0 /* djpeg */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = djpeg;
+			remoteRef = 295AE99B2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE99E2C04A50F001A8DE0 /* djpeg-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "djpeg-static";
+			remoteRef = 295AE99D2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9A02C04A50F001A8DE0 /* libdjpeg12.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdjpeg12.a;
+			remoteRef = 295AE99F2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9A22C04A50F001A8DE0 /* libdjpeg12-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdjpeg12-static.a";
+			remoteRef = 295AE9A12C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9A42C04A50F001A8DE0 /* libdjpeg16.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libdjpeg16.a;
+			remoteRef = 295AE9A32C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9A62C04A50F001A8DE0 /* libdjpeg16-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdjpeg16-static.a";
+			remoteRef = 295AE9A52C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9A82C04A50F001A8DE0 /* example */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = example;
+			remoteRef = 295AE9A72C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9AA2C04A50F001A8DE0 /* example-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "example-static";
+			remoteRef = 295AE9A92C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9AC2C04A50F001A8DE0 /* jcstest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = jcstest;
+			remoteRef = 295AE9AB2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9AE2C04A50F001A8DE0 /* libjpeg.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			name = libjpeg.dylib;
+			path = libjpeg.62.4.0.dylib;
+			remoteRef = 295AE9AD2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9B02C04A50F001A8DE0 /* libjpeg.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjpeg.a;
+			remoteRef = 295AE9AF2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9B22C04A50F001A8DE0 /* libjpeg12.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjpeg12.a;
+			remoteRef = 295AE9B12C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9B42C04A50F001A8DE0 /* libjpeg12-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjpeg12-static.a";
+			remoteRef = 295AE9B32C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9B62C04A50F001A8DE0 /* libjpeg16.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjpeg16.a;
+			remoteRef = 295AE9B52C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9B82C04A50F001A8DE0 /* libjpeg16-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjpeg16-static.a";
+			remoteRef = 295AE9B72C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9BA2C04A50F001A8DE0 /* jpegtran */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = jpegtran;
+			remoteRef = 295AE9B92C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9BC2C04A50F001A8DE0 /* jpegtran-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "jpegtran-static";
+			remoteRef = 295AE9BB2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9BE2C04A50F001A8DE0 /* md5cmp */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = md5cmp;
+			remoteRef = 295AE9BD2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9C02C04A50F001A8DE0 /* rdjpgcom */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = rdjpgcom;
+			remoteRef = 295AE9BF2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9C22C04A50F001A8DE0 /* libsimd.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsimd.a;
+			remoteRef = 295AE9C12C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9C42C04A50F001A8DE0 /* strtest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = strtest;
+			remoteRef = 295AE9C32C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9C62C04A50F001A8DE0 /* tjbench */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = tjbench;
+			remoteRef = 295AE9C52C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9C82C04A50F001A8DE0 /* tjbench-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "tjbench-static";
+			remoteRef = 295AE9C72C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9CA2C04A50F001A8DE0 /* tjexample */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = tjexample;
+			remoteRef = 295AE9C92C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9CC2C04A50F001A8DE0 /* tjunittest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = tjunittest;
+			remoteRef = 295AE9CB2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9CE2C04A50F001A8DE0 /* tjunittest-static */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "tjunittest-static";
+			remoteRef = 295AE9CD2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9D02C04A50F001A8DE0 /* libturbojpeg.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			name = libturbojpeg.dylib;
+			path = libturbojpeg.0.3.0.dylib;
+			remoteRef = 295AE9CF2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9D22C04A50F001A8DE0 /* libturbojpeg.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libturbojpeg.a;
+			remoteRef = 295AE9D12C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9D42C04A50F001A8DE0 /* libturbojpeg12.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libturbojpeg12.a;
+			remoteRef = 295AE9D32C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9D62C04A50F001A8DE0 /* libturbojpeg12-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libturbojpeg12-static.a";
+			remoteRef = 295AE9D52C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9D82C04A50F001A8DE0 /* libturbojpeg16.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libturbojpeg16.a;
+			remoteRef = 295AE9D72C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9DA2C04A50F001A8DE0 /* libturbojpeg16-static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libturbojpeg16-static.a";
+			remoteRef = 295AE9D92C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		295AE9DC2C04A50F001A8DE0 /* wrjpgcom */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = wrjpgcom;
+			remoteRef = 295AE9DB2C04A50F001A8DE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		295AE9492C04A33D001A8DE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				295AE9E32C04A5FE001A8DE0 /* dng_bridge.cpp in Sources */,
+				295AE9ED2C04A959001A8DE0 /* compress-tile.cpp in Sources */,
+				295AE9E22C04A5FE001A8DE0 /* make_dng_from_cfa.cc in Sources */,
+				295AE9512C04A33D001A8DE0 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		295AE9522C04A33D001A8DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"turbo-jpeg",
+					"tiny-dng",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		295AE9532C04A33D001A8DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"turbo-jpeg",
+					"tiny-dng",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+			};
+			name = Release;
+		};
+		295AE9552C04A33D001A8DE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "prores-to-cdng/dng_export-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		295AE9562C04A33D001A8DE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "prores-to-cdng/dng_export-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		295AE9482C04A33D001A8DE0 /* Build configuration list for PBXProject "prores-to-cdng" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				295AE9522C04A33D001A8DE0 /* Debug */,
+				295AE9532C04A33D001A8DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		295AE9542C04A33D001A8DE0 /* Build configuration list for PBXNativeTarget "prores-to-cdng" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				295AE9552C04A33D001A8DE0 /* Debug */,
+				295AE9562C04A33D001A8DE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 295AE9452C04A33D001A8DE0 /* Project object */;
+}
