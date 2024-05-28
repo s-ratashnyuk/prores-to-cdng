@@ -9,32 +9,21 @@
 #include <chrono>
 
 #include "make_dng_from_cfa.h"
+#include "dng-request-params.h"
+
+#include "camera-definitions/panasonic.h"
 
 typedef uint32_t uint32;
 
 #define qLogJXL true
 
-struct dng_request_params {
-    std::string fileName;
-    std::string manufacturer;
-    std::string model;
-    std::string fNumber;
-    std::string irisfNumber;
-    std::string shutterSpeed;
-    std::string shutterAngle;
-    std::string iso;
-    std::string lensModel;
-    std::string lensAttributes;
-    uint32 width;
-    uint32 height;
-    uint32 blackLevel;
-    uint32 whiteLevel;
-};
 
 class DngBridge {
+private:
+    cameraDefinition cameraProfile;
 public:
     DngBridge();
-    void request_dng(void *fData, int fDataSize, std::string fileName, std::string manufacturer, std::string model, std::string fNumber, std::string irisfNumber, std::string shutterSpeed, std::string shutterAngle, std::string iso, std::string lensModel, std::string lensAttributes, uint32 width, uint32 height, uint32 blackLevel, uint32 whiteLevel);
-    void make_dng(void *fData, std::string fileName, std::string manufacturer, std::string model, std::string fNumber, std::string irisfNumber, std::string shutterSpeed, std::string shutterAngle, std::string iso, std::string lensModel, std::string lensAttributes, uint32 width, uint32 height, uint32 blackLevel, uint32 whiteLevel);
+    void request_dng(void *fData, int fDataSize, std::string fileName, dng_request_params drp);
+    void make_dng(void *fData, std::string fileName, dng_request_params drp);
     void wait_until_complete();
 };

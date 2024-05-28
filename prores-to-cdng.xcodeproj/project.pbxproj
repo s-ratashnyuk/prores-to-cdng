@@ -362,11 +362,13 @@
 		295AE9DF2C04A5FE001A8DE0 /* dng_bridge.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = dng_bridge.hpp; sourceTree = "<group>"; };
 		295AE9E02C04A5FE001A8DE0 /* make_dng_from_cfa.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = make_dng_from_cfa.cc; sourceTree = "<group>"; };
 		295AE9E12C04A5FE001A8DE0 /* dng_bridge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = dng_bridge.cpp; sourceTree = "<group>"; };
-		295AE9E92C04A926001A8DE0 /* linearizationTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = linearizationTable.h; sourceTree = "<group>"; };
 		295AE9EA2C04A959001A8DE0 /* compress-tile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "compress-tile.hpp"; sourceTree = "<group>"; };
 		295AE9EB2C04A959001A8DE0 /* compress-tile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "compress-tile.cpp"; sourceTree = "<group>"; };
 		295AE9EC2C04A959001A8DE0 /* utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		295AE9EE2C04A9AB001A8DE0 /* tiny_dng_writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tiny_dng_writer.h; path = "tiny-dng/tiny_dng_writer.h"; sourceTree = SOURCE_ROOT; };
+		297063562C05E1D4000F8E36 /* dng-request-params.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dng-request-params.h"; sourceTree = "<group>"; };
+		2970638D2C05E4AC000F8E36 /* panasonic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = panasonic.h; sourceTree = "<group>"; };
+		2970638E2C05E4BF000F8E36 /* camera-definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "camera-definition.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -447,17 +449,18 @@
 		295AE94F2C04A33D001A8DE0 /* prores-to-cdng */ = {
 			isa = PBXGroup;
 			children = (
+				2970638C2C05E499000F8E36 /* camera-definitions */,
 				295AE9EE2C04A9AB001A8DE0 /* tiny_dng_writer.h */,
 				295AE9EB2C04A959001A8DE0 /* compress-tile.cpp */,
 				295AE9EA2C04A959001A8DE0 /* compress-tile.hpp */,
 				295AE9EC2C04A959001A8DE0 /* utils.h */,
-				295AE9E92C04A926001A8DE0 /* linearizationTable.h */,
 				295AE9E12C04A5FE001A8DE0 /* dng_bridge.cpp */,
 				295AE9DF2C04A5FE001A8DE0 /* dng_bridge.hpp */,
 				295AE9DD2C04A5FE001A8DE0 /* dng_export-Bridging-Header.h */,
 				295AE9E02C04A5FE001A8DE0 /* make_dng_from_cfa.cc */,
 				295AE9DE2C04A5FE001A8DE0 /* make_dng_from_cfa.h */,
 				295AE9502C04A33D001A8DE0 /* main.swift */,
+				297063562C05E1D4000F8E36 /* dng-request-params.h */,
 			);
 			path = "prores-to-cdng";
 			sourceTree = "<group>";
@@ -513,6 +516,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2970638C2C05E499000F8E36 /* camera-definitions */ = {
+			isa = PBXGroup;
+			children = (
+				2970638D2C05E4AC000F8E36 /* panasonic.h */,
+				2970638E2C05E4BF000F8E36 /* camera-definition.h */,
+			);
+			path = "camera-definitions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

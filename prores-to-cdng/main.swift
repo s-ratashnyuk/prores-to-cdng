@@ -16,10 +16,6 @@ struct PassToDecompressCallback {
     var exifInfo: PassToExif
 }
 
-var drp_test = dng_request_params();
-drp_test.fileName = "123"
-
-
 struct PassToExif {
     var manufacurer: String = ""
     var modelName: String = ""
@@ -206,11 +202,27 @@ class Decoder {
                         //let timecode = passToDecompressCallback.timecode
                         let fileName = "\(passToDecompressCallback.outputFolder)image_\(passToDecompressCallback.counter).dng"
                         
+                        var drp = dng_request_params();
+                        drp.fileName = std.string(fileName)
+                        drp.blackLevel = blackLevel;
+                        drp.whiteLevel = whiteLevel;
+                        
+                        drp.manufacturer = manufacturer;
+                        drp.model = model;
+                        drp.fNumber = fNumber;
+                        drp.height = heigth;
+                        drp.width = width;
+                        drp.lensModel = lensMaker;
+                        drp.lensAttributes = lensAttributes;
+                        drp.iso = iso;
+                        drp.shutterAngle = shutterAngle;
+                        drp.shutterSpeed = shutterSpeed;
+                        
                         //if (passToDecompressCallback.counter <= 1690) {
                         //    return
                         //}
                          
-                        passToDecompressCallback.dngProxy.request_dng(iBP!, Int32(iPBSize), std.string(fileName), manufacturer, model, fNumber, fIrisNumber, shutterSpeed, shutterAngle, iso, lensMaker, lensAttributes, width, heigth, blackLevel, whiteLevel)
+                        passToDecompressCallback.dngProxy.request_dng(iBP!, Int32(iPBSize), std.string(fileName), drp)
                     }
                     
                     var outputCallback = VTDecompressionOutputCallbackRecord(decompressionOutputCallback: vTDecompressionCallback, decompressionOutputRefCon: &vd)

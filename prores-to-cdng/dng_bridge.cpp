@@ -7,10 +7,10 @@
 int workers = 0;
 
 DngBridge::DngBridge() {
-
+    panasonic::getDefinitionForPanasonic(&cameraProfile);
 }
 
-void DngBridge::request_dng(void *data, int dataSize, std::string fileName, std::string manufacturer, std::string model, std::string fNumber, std::string irisfNumber, std::string shutterSpeed, std::string shutterAngle, std::string iso, std::string lensModel, std::string lensAttributes, uint32 width, uint32 height, uint32 blackLevel, uint32 whiteLevel) {
+void DngBridge::request_dng(void *data, int dataSize, std::string fileName, dng_request_params drp) {
     
     char* dataForWorker = new char[dataSize];
 
@@ -19,10 +19,12 @@ void DngBridge::request_dng(void *data, int dataSize, std::string fileName, std:
     while(workers >= 8) {
         std::this_thread::sleep_for(std::chrono::milliseconds(10));
     }
-
-    auto f = [this, fileName, dataForWorker, dataSize, manufacturer, model, fNumber, irisfNumber, shutterSpeed, shutterAngle, iso, lensModel, lensAttributes, width, height, blackLevel, whiteLevel]() {
     
-        makeDngFromCFA(dataForWorker, dataSize, fileName);
+    drp.cameraProfile = cameraProfile;
+
+    auto f = [this, fileName, dataForWorker, dataSize, drp]() {
+    
+        makeDngFromCFA(dataForWorker, dataSize, fileName, drp);
                  
         delete[] dataForWorker;
         

@@ -16,26 +16,19 @@
 
 #include "turbojpeg.h"
 
-#include "linearizationTable.h"
-#include "utils.h"
 #include "compress-tile.hpp"
 
 #include "make_dng_from_cfa.h"
 
-
-int tileWidth = 5888;
-int tileLength = 3312;
 int tilesCount = 1;
 
-uint16_t * linearizationTable = getLinearizationTable();
-
-std::vector<uint16_t> getTile(uint16_t * inData, int x0, int y0, int x1, int y1) {
+std::vector<uint16_t> getTile(uint16_t * inData, int x0, int y0, int x1, int y1, int imageWidth, uint16_t * linearizationTable) {
     long tileSize = x1 * y1;
     
     std::vector<uint16_t> tile;
     tile.reserve(tileSize);
     
-    int rowSize = tileWidth;
+    int rowSize = imageWidth;
     
     int count = 0;
     
@@ -52,7 +45,7 @@ std::vector<uint16_t> getTile(uint16_t * inData, int x0, int y0, int x1, int y1)
     return tile;
 }
 
-long getTiles(uint16_t * inData, long inDataSize, std::vector<unsigned char> * tilesMemoryBlock, std::vector<long> * tilesSizes) {
+long getTiles(uint16_t * inData, long inDataSize, std::vector<unsigned char> * tilesMemoryBlock, std::vector<long> * tilesSizes, int tileWidth, int tileLength, uint16_t * linearizationTable) {
     using std::chrono::high_resolution_clock;
     using std::chrono::duration_cast;
     using std::chrono::milliseconds;
@@ -65,7 +58,7 @@ long getTiles(uint16_t * inData, long inDataSize, std::vector<unsigned char> * t
     
     for (int i = 0; i < tilesCount; i++) {
         
-        auto tile = getTile(inData, i * tileWidth, 0, tileWidth + i * tileWidth, tileLength);
+        auto tile = getTile(inData, i * tileWidth, 0, tileWidth + i * tileWidth, tileLength, tileWidth, linearizationTable);
         
         unsigned char * compressedTile = NULL;
         
@@ -106,14 +99,16 @@ long getTiles(uint16_t * inData, long inDataSize, std::vector<unsigned char> * t
     return tilesSizes->size();
 }
 
-void makeDngFromCFA(void * inBuf, long size, std::string fileName) {
+void makeDngFromCFA(void * inBuf, long size, std::string fileName, dng_request_params drp) {
     tinydngwriter::DNGImage di;
     di.SetSubfileType(false, false, false);
     di.SetBigEndian(false);
-    di.SetImageWidth(5888);
-    di.SetImageLength(3312);
+    di.SetImageWidth(drp.width);
+    di.SetImageLength(drp.height);
     di.SetCompression(7);
-    di.SetUniqueCameraModel("Panasonic DC-S5M2");
+    
+    std::string uniqueCameraModel = drp.manufacturer + "  " + drp.model;
+    di.SetUniqueCameraModel(uniqueCameraModel);
     
     di.SetPhotometric(tinydngwriter::PHOTOMETRIC_CFA);
     di.SetDNGVersion(1, 1, 0, 0);
@@ -133,22 +128,22 @@ void makeDngFromCFA(void * inBuf, long size, std::string fileName) {
     
     di.SetBlackLevelRepeatDim(1, 1);
         
-    double cm1[9] = {0.94519, -0.24292, -0.0788574, -0.494141, 1.12805, 0.0595703, -0.00927734, 0.0153809, 0.220337};
+    double * cm1 = drp.cameraProfile.colorMatrix1;
     di.SetColorMatrix1(3, cm1);
     
-    double cm2[9] = {0.493408, -0.0946045, -0.0467529, -0.400269, 0.959595, 0.132446, 0.013916, -0.0236816, 0.426147};
+    double * cm2 = drp.cameraProfile.colorMatrix2;
     di.SetColorMatrix2(3, cm2);
     
-    double asn[3] = {0.494629, 1, 0.568237};
+    double * asn = drp.cameraProfile.asShotNeutral;
     di.SetAsShotNeutral(3, asn);
     
     unsigned char cfaP[4] = {00, 0x1, 0x1, 0x2};
     di.SetCFAPattern(4, cfaP);
     
-    unsigned short blL[1] = { 256 };
+    unsigned short blL[1] = { (unsigned short)drp.blackLevel };
     di.SetBlackLevel(1, blL);
     
-    double whL[1] = { 48179 };
+    double whL[1] = { (double)drp.whiteLevel };
     di.SetWhiteLevelRational(1, whL);
     
     di.SetCFARepeatPatternDim(2, 2);
@@ -158,7 +153,10 @@ void makeDngFromCFA(void * inBuf, long size, std::string fileName) {
     std::vector<unsigned char> tilesMemoryBlock;
     std::vector<long> tilesSizes;
         
-    getTiles((uint16_t *) inBuf, size, &tilesMemoryBlock, &tilesSizes);
+    
+    int tileWidth = drp.width;
+    int tileLength = drp.height;
+    getTiles((uint16_t *) inBuf, size, &tilesMemoryBlock, &tilesSizes, tileWidth, tileLength, drp.cameraProfile.linearizationTable);
 
     di.SetTilesData(tileWidth, tileLength, &tilesMemoryBlock, &tilesSizes);
     

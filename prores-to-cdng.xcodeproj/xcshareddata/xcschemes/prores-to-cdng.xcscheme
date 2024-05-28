@@ -51,6 +51,12 @@
             ReferencedContainer = "container:prores-to-cdng.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-i /Users/hamsterlsb/Desktop/SRC.MOV -o /Users/hamsterlsb/Desktop/m1/"
+            isEnabled = "YES">
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
