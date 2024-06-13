@@ -10,6 +10,16 @@
 
 #include "camera-definitions/camera-definition.h"
 
+
+namespace dng_request_params_constants {
+    typedef enum {
+     COMPRESSION_HIGH = 95,
+     COMPRESSION_LOW = 90,
+     COMPRESSION_NONE = -1,
+     COMPRESSION_LOSELESS = -2,
+    };
+}
+
 struct dng_request_params {
     std::string fileName;
     std::string manufacturer;
@@ -25,6 +35,7 @@ struct dng_request_params {
     uint32_t height;
     uint32_t blackLevel;
     uint32_t whiteLevel;
+    int compression;
     cameraDefinition cameraProfile;
 };
 
